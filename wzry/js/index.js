@@ -124,3 +124,52 @@ ulTitles.onmouseover = function (e) {
   }
   switchNews(index);
 };
+
+
+// 导航栏点击选中效果
+function tabUI(obj){  
+  var oLis =  document.querySelectorAll(".main-nav li");
+  console.log(oLis);
+  
+    for(var i=0;i<oLis.length;i++){
+        oLis[i].onclick = function(){
+          // alert('ww')
+          for(var j = 0; j<oLis.length; j++){
+            oLis[j].className='';
+            console.log('a'); 
+          } 
+      }
+    }
+    obj.className ="active"; 
+  
+}
+
+
+/* 
+// 鼠标移入图片加朦层和文字 
+   function toggleTab(){
+   console.log('122');
+  //1.获取li标签列表
+  var liList = document.querySelectorAll(".hero_pic_list li");
+  / 
+ 
+  
+  //2.遍历数组
+  for(var i = 0;i<liList.length;i++){ 
+  //3.1 给每一个li标签注册鼠标移入和移出事件
+      liList[i].onmouseover = function () { 
+        console.log('11');
+ 
+        
+    } 
+    //3.2 移出
+    liList[i].onmouseout = function () {
+      console.log("22"); 
+    
+    }
+  }
+  
+ 
+   
+ }
+ toggleTab();  */
